@@ -1,6 +1,6 @@
-# Wrapper for gotty
+# Wrapper for Theta EdgeNode
 
-GoTTY is a simple, minimal project that serves as a template for creating a service that runs on StartOS. This repository creates the `s9pk` package that is installed to run `gotty` on [StartOS](https://github.com/Start9Labs/start-os/). Learn more about service packaging in the [Developer Docs](https://start9.com/latest/developer-docs/).
+Theta EdgeNode is a simple, minimal project that serves as a template for creating a service that runs on StartOS. This repository creates the `s9pk` package that is installed to run `gotty` on [StartOS](https://github.com/Start9Labs/start-os/). Learn more about service packaging in the [Developer Docs](https://start9.com/latest/developer-docs/).
 
 ## Dependencies
 
@@ -55,27 +55,27 @@ cd start-os/backend/
 ./install-sdk.sh
 start-sdk init
 ```
-Now you are ready to build the `gotty` package!
+Now you are ready to build the `theta-edgenode` package!
 
 ## Cloning
 
 Clone the project locally:
 
 ```
-git clone https://github.com/Start9Labs/gotty-startos.git
-cd gotty-startos
+git clone https://github.com/andrewlunde/theta-edgenode-start9.git
+cd theta-edgenode-start9
 git submodule update --init --recursive
 ```
 
 ## Building
 
-To build the `gotty` package for all platforms using start-sdk, run the following command:
+To build the `theta-edgenode` package for all platforms using start-sdk, run the following command:
 
 ```
 make
 ```
 
-To build the `gotty` package for a single platform using start-sdk, run:
+To build the `theta-edgenode` package for a single platform using start-sdk, run:
 
 ```
 # for amd64
@@ -95,7 +95,7 @@ Run the following commands to determine successful install:
 ```
 start-cli auth login
 # Enter your StartOS password
-start-cli --host https://server-name.local package install gotty.s9pk
+start-cli --host https://server-name.local package install theta-edgenode.s9pk
 ```
 
 If you already have your `start-cli` config file setup with a default `host`, you can install simply by running:
@@ -104,10 +104,10 @@ If you already have your `start-cli` config file setup with a default `host`, yo
 make install
 ```
 
-> **Tip:** You can also install the gotty.s9pk using **Sideload Service** under the **System > Manage** section.
+> **Tip:** You can also install the theta-edgenode.s9pk using **Sideload Service** under the **System > Manage** section.
 
 ### Verify Install
 
-Go to your StartOS Services page, select **GoTTY**, configure and start the service. Then, verify its interfaces are accessible.
+Go to your StartOS Services page, select **Theta EdgeNode**, configure and start the service. Then, verify its interfaces are accessible.
 
 **Done!** 

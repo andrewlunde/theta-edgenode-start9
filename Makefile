@@ -31,7 +31,7 @@ clean-manifest:
 rebranding:
 	@read -p "Enter new package ID name (must be a single word): " NEW_PKG_ID; \
 	read -p "Enter new package title: " NEW_PKG_TITLE; \
-	find . \( -name "*.md" -o -name ".gitignore" -o -name "manifest.yaml" -o -name "*Service.yml" \) -type f -not -path "./gotty/*" -exec sed -i '' -e "s/gotty/$$NEW_PKG_ID/g; s/GoTTY EdgeNode/$$NEW_PKG_TITLE/g" {} +; \
+	find . \( -name "*.md" -o -name ".gitignore" -o -name "manifest.yaml" -o -name "*Service.yml" \) -type f -not -path "./gotty/*" -exec sed -i '' -e "s/gotty/$$NEW_PKG_ID/g; s/Theta EdgeNode EdgeNode/$$NEW_PKG_TITLE/g" {} +; \
 	echo; echo "Rebranding complete."; echo "	New package ID name is:	$$NEW_PKG_ID"; \
 	echo "	New package title is:	$$NEW_PKG_TITLE"; \
 	sed -i '' -e '/^# BEGIN REBRANDING/,/^# END REBRANDING/ s/^#*/#/' Makefile
