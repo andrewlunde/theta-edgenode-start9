@@ -1,0 +1,26 @@
+edgeCore:
+  binaryPath: "/bin/edgecore"
+  configPath: "/edgelauncher/data/mainnet/edgecore"
+  logfilePath: "/edgelauncher/data/mainnet/edgecore.log" 
+anycast:
+  binaryPath: "/bin/anycast"
+  configPath: "/edgelauncher/data/mainnet/anycast"
+  logfilePath: "/edgelauncher/data/mainnet/anycast.log" 
+edgeEncoder:
+  enabled: true
+  binaryPath: "/bin/edgeencoder"
+  configPath: "/edgelauncher/data/mainnet/edgeencoder"
+  logfilePath: "/edgelauncher/data/mainnet/edgeencoder.log" 
+lavita:
+  scriptPath: "launch-lavita.sh"
+fedml:
+  enabled: true
+  binaryPath: "launch-fedml.sh"
+  accountId: "1046"
+  apiKey: "1046"
+rpc:
+  enabled: true
+  address: 0.0.0.0
+  port: 15888
+url:
+  edgeServiceUrl: "https://theta-edge-api.thetatoken.org/edgelauncher/"

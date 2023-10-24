@@ -1,0 +1,41 @@
+# Theta Edge Node testnet configuration
+genesis:
+  chainID: "mainnet"
+p2p:
+  port: 40001
+  #seeds: 35.235.73.165:30001,35.231.179.231:30001,34.68.139.22:30001
+  # bootstrapSeeds: 35.235.73.165:16888,35.231.179.231:16888,34.68.139.22:16888
+  bootstrapSeeds: 54.151.72.227:16888
+  minNumPeers: 48
+  maxNumPeers: 96
+  maxInitiallyAttemptedPeers: 64
+  maxConnections: 2048
+  connectionFIFO: true
+  #natMapping: true
+rpc:
+  port: 17935
+  enabled: true
+  address: 0.0.0.0
+log:
+  #levels: "*:info,guardian:debug"
+  levels: "*:debug"
+env: "production"
+url:
+  tvaReceiverRegisterUrl: "https://rcvr.thetavideoapi.com/eenworker"
+  tvaReceiverUIInfoUrl: "https://rcvr.thetavideoapi.com/get_ui_info"
+  tvaReceiverCommitUrl:  "https://rcvr.thetavideoapi.com/jobdone"
+  tvaReceiverUploadUrl:  "https://rcvr.thetavideoapi.com/upload"
+  tvaReceiverDRMKeyUrl: "https://rcvr.thetavideoapi.com/key"
+  tvaDispatcherDRMKEYUrl: "https://api.thetavideoapi.com/"
+
+data:
+  path: "."
+
+ffmpeg:
+  path: "/usr/bin/ffmpeg"
+ffprobe:
+  path: "/usr/bin/ffprobe"
+
+listener:
+  port: "18877"
+

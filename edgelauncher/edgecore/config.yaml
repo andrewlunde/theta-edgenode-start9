@@ -1,0 +1,18 @@
+# Theta Edge Node privatenet configuration
+genesis:
+  chainID: "mainnet"
+p2p:
+  port: 40011
+  bootstrapSeeds: 34.72.110.87:16888,34.82.100.2:16888,34.71.142.231:16888,3.140.71.3:16888,52.14.127.89:16888
+  minNumPeers: 24
+  maxNumPeers: 96
+  maxInitiallyAttemptedPeers: 48
+  maxConnections: 2048
+  connectionFIFO: true
+  natMapping: false
+rpc:
+  port: 17888
+  enabled: true
+  address: 0.0.0.0
+log:
+  levels: "*:info"
