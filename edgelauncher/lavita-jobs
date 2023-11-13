@@ -1,0 +1,3 @@
+#!/bin/sh
+
+curl -s -X GET 'http://localhost:12888/past_jobs?page=0&num=10' | jq '.'

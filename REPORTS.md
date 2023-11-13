@@ -61,3 +61,60 @@ echo "create_time,id,reward_tfuelwei" ; curl -s -X POST -H 'Content-Type: applic
 
 // Status of encoding jobs
 curl -s -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"edgeencoder.GetStatus","params":[],"id":1}' http://localhost:17935/rpc | jq -r '.result | .address, .encoder_state, .status, .pending_tfuel'
+
+$ ps aux | grep lavita
+root         109  0.0  0.0   4492  3432 ?        S    Oct25   0:00 /bin/bash /usr/bin/launch-lavita.sh start . 8 0
+
+// FedML Jobs
+curl -s -X POST http://localhost:40800/fedml/api/v2/historyJobStatus -d "{}" | jq '.'
+
+// Lavita Jobs
+curl -s -X GET 'http://localhost:12888/past_jobs?page=0&num=10' | jq '.'
+
+cd /root/fedml-miniconda/envs/fedml-theta-pip/bin/ 
+./fedml --help
+Commands:
+  login     Login the FedML® Nexus AI Platform
+  logout    Logout from the FedML® Nexus AI Platform
+  launch    Launch job at the FedML® Nexus AI platform
+  cluster   Manage clusters on FedML® Nexus AI Platform
+  run       Manage runs on the FedML® Nexus AI Platform.
+  device    Bind/unbind devices to the FedML® Nexus AI Platform
+  model     FedML Model CLI will help you manage the model cards, whether...
+  build     Build packages for the FedML® Nexus AI Platform
+  logs      Display logs for ongoing runs
+  train     Manage training resources on FedML® Nexus AI Platform
+  federate  Manage federated learning resources on FedML® Nexus AI Platform
+  env       Get environment info such as versions, hardware, and networking
+  network   Check the Nexus AI backend network connectivity
+  version   Display FEDML library version
+(
+
+$ ./fedml env
+
+======== FedML (https://fedml.ai) ========
+FedML version: 0.8.11.post4
+FedML ENV version: release
+Execution path:/root/fedml-miniconda/envs/fedml-theta-pip/lib/python3.8/site-packages/fedml/__init__.py
+
+======== Running Environment ========
+OS: Linux-6.1.0-0.deb11.7-amd64-x86_64-with-glibc2.17
+Hardware: x86_64
+Python version: 3.8.17 (default, Jul  5 2023, 21:04:15) 
+[GCC 11.2.0]
+PyTorch version: 2.0.1+cu117
+MPI4py is NOT installed
+
+======== CPU Configuration ========
+The CPU usage is : 17%
+Available CPU Memory: 17.0 G / 31.22247314453125G
+
+======== GPU Configuration ========
+No GPU devices
+
+======== Network Connection Checking ========
+The connection to https://open.fedml.ai is OK.
+
+The connection to S3 Object Storage is OK.
+
+The connection to mqtt.fedml.ai (port:1883) is OK.
