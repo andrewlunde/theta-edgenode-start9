@@ -1,7 +1,7 @@
 FROM ubuntu:23.04
 LABEL maintainer="andrewlunde <andrew.lunde@sap.com>"
-#FROM thetalabsorg/edgelauncher_mainnet:v1.1.0
-FROM thetalabsorg/edgelauncher_mainnet:latest
+FROM thetalabsorg/edgelauncher_mainnet:v1.1.0
+#FROM thetalabsorg/edgelauncher_mainnet:latest
 ##CMD ["/bin/sh" "-c" "/bin/start.sh"]
 
 RUN mkdir -p /edgelauncher/data/mainnet
