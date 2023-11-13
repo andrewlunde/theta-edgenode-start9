@@ -1,7 +1,7 @@
 FROM ubuntu:23.04
 LABEL maintainer="andrewlunde <andrew.lunde@sap.com>"
-FROM thetalabsorg/edgelauncher_mainnet:v1.1.0
-#FROM thetalabsorg/edgelauncher_mainnet:latest
+#FROM thetalabsorg/edgelauncher_mainnet:v1.1.0
+FROM thetalabsorg/edgelauncher_mainnet:latest
 ##CMD ["/bin/sh" "-c" "/bin/start.sh"]
 
 RUN mkdir -p /edgelauncher/data/mainnet
@@ -30,7 +30,7 @@ RUN chmod a+x /bin/lavita-jobs
 RUN echo 'echo ""' > /root/.bashrc && \
     echo 'echo "Theta EdgeNode started in the background."' >> /root/.bashrc && \
     echo 'echo "Run staking-summary command to display the Staking Summary for this EdgeNode."' >> /root/.bashrc && \
-    echo 'echo "Other commands: encoding-jobs, encoding-status, fedml-jebs, lavita-jobs"' >> /root/.bashrc && \
+    echo 'echo "Other commands: encoding-jobs, encoding-status, fedml-jobs, lavita-jobs"' >> /root/.bashrc && \
     echo 'echo ""' >> /root/.bashrc  && \
     echo "export PS1='\h:\w\$ '" >> /root/.bashrc
 
