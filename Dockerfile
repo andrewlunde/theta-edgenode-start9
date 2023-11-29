@@ -1,7 +1,7 @@
 FROM ubuntu:23.04
 LABEL maintainer="andrewlunde <andrew.lunde@sap.com>"
 FROM thetalabsorg/edgelauncher_mainnet:v1.1.0
-#FROM thetalabsorg/edgelauncher_mainnet:latest
+#FROM thetalabsorg/edgelauncher_mainnet:latest # v1.3.1 currently
 ##CMD ["/bin/sh" "-c" "/bin/start.sh"]
 
 RUN mkdir -p /edgelauncher/data/mainnet
@@ -21,16 +21,21 @@ RUN chmod a+x /bin/encoding-jobs
 ADD ./edgelauncher/encoding-status /bin/encoding-status
 RUN chmod a+x /bin/encoding-status
 
-ADD ./edgelauncher/fedml-jobs /bin/fedml-jobs
-RUN chmod a+x /bin/fedml-jobs
+#ADD ./edgelauncher/fedml-jobs /bin/fedml-jobs
+#RUN chmod a+x /bin/fedml-jobs
 
-ADD ./edgelauncher/lavita-jobs /bin/lavita-jobs
-RUN chmod a+x /bin/lavita-jobs
+#ADD ./edgelauncher/lavita-jobs /bin/lavita-jobs
+#RUN chmod a+x /bin/lavita-jobs
+
+RUN wget -O /bin/edgestore https://theta-downloader.s3.amazonaws.com/edgestore/alpha-preview/linux/edgestore
+RUN chmod +x /bin/edgestore
+ADD ./configs/multi-node/node/config.yaml /bin/edgestore_config.yaml
+
 
 RUN echo 'echo ""' > /root/.bashrc && \
     echo 'echo "Theta EdgeNode started in the background."' >> /root/.bashrc && \
     echo 'echo "Run staking-summary command to display the Staking Summary for this EdgeNode."' >> /root/.bashrc && \
-    echo 'echo "Other commands: encoding-jobs, encoding-status, fedml-jebs, lavita-jobs"' >> /root/.bashrc && \
+    echo 'echo "Other commands: encoding-jobs, encoding-status"' >> /root/.bashrc && \
     echo 'echo ""' >> /root/.bashrc  && \
     echo "export PS1='\h:\w\$ '" >> /root/.bashrc
 
@@ -44,6 +49,8 @@ EXPOSE 80
 EXPOSE 15888
 EXPOSE 17888
 EXPOSE 17935
+EXPOSE 19888
+EXPOSE 8080
 
 RUN apt-get -y update && \
     apt-get install -y htop lsof && \

@@ -1,13 +1,13 @@
 # Example written in yaml (toml and json are also acceptable)
 
 # The package identifier used by the OS. This must be unique amongst all other known packages
-id: theta-edgenode
+id: theta-edgenode-store
  # A human readable service title
-title: "Theta EdgeNode"
+title: "Theta EdgeNode + EdgeStore"
 # Service version - accepts up to four digits, where the last confirms to revisions necessary for StartOS - see documentation: https://github.com/Start9Labs/emver-rs. This value will change with each release of the service. 
-version: 1.3.1
+version: 1.1.0
 # Release notes for the update - can be a string, paragraph or URL
-release-notes: "Theta EdgeNode 1.3.1"
+release-notes: "Theta EdgeNode 1.1.0 + Beta EdgeStore"
 # The type of license for the project. Include the LICENSE in the root of the project directory. A license is required for a Start9 package.
 license: mit
 # The Start9 wrapper repository URL for the package. This repo contains the manifest file (this), any scripts necessary for configuration, backups, actions, or health checks (more below). This key must exist. But could be embedded into the source repository. 
@@ -23,10 +23,10 @@ build: ["make"]
 # Human readable descriptors for the service. These are used throughout the StartOS user interface, primarily in the marketplace.
 description:
   # This is the first description visible to the user in the marketplace.
-  short: Theta EdgeNode
+  short: Theta EdgeNode + EdgeStore
   # This description will display with additional details in the service's individual marketplace page
   long: |
-    Theta EdgeNode is a service that runs an EdgeNode suitable for promoting to an Elite Edge Node once staked with 10,000 TFuel.
+    Theta EdgeNode is a service that runs an EdgeNode suitable for promoting to an Elite Edge Node once staked with 10,000 TFuel.  This version contains the EdgeStore beta, which allows you to earn TFuel by sharing your storage space.  This is a beta version of EdgeStore, and is not yet fully functional.  Please see the EdgeStore documentation for more information.
 # These assets are static files necessary for packaging the service for Start9 (into an s9pk). Each value is a path to the specified asset. If an asset is missing from this list, or otherwise denoted, it will be defaulted to the values denoted below. 
 assets:
   # Default = LICENSE.md
