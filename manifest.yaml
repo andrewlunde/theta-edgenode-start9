@@ -5,9 +5,9 @@ id: theta-edgenode
  # A human readable service title
 title: "Theta EdgeNode"
 # Service version - accepts up to four digits, where the last confirms to revisions necessary for StartOS - see documentation: https://github.com/Start9Labs/emver-rs. This value will change with each release of the service. 
-version: 1.1.0
+version: 1.3.1
 # Release notes for the update - can be a string, paragraph or URL
-release-notes: "Theta EdgeNode 1.1.0"
+release-notes: "Theta EdgeNode 1.3.1"
 # The type of license for the project. Include the LICENSE in the root of the project directory. A license is required for a Start9 package.
 license: mit
 # The Start9 wrapper repository URL for the package. This repo contains the manifest file (this), any scripts necessary for configuration, backups, actions, or health checks (more below). This key must exist. But could be embedded into the source repository. 

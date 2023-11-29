@@ -1,13 +1,13 @@
 FROM ubuntu:23.04
 LABEL maintainer="andrewlunde <andrew.lunde@sap.com>"
-FROM thetalabsorg/edgelauncher_mainnet:v1.1.0
-#FROM thetalabsorg/edgelauncher_mainnet:latest
+#FROM thetalabsorg/edgelauncher_mainnet:v1.1.0
+FROM thetalabsorg/edgelauncher_mainnet:latest
 ##CMD ["/bin/sh" "-c" "/bin/start.sh"]
 
 RUN mkdir -p /edgelauncher/data/mainnet
 #RUN mkdir -p /edgelauncher/data/mainnet/anycast
 #RUN mkdir -p /edgelauncher/data/mainnet/edgecore
-#RUN mkdir -p /edgelauncher/data/mainnet/edgeencoder
+#RUN mkdir -p /edgelauncher/data/mainnet/edgeenclsoder
 
 #ADD ./edgelauncher/config.yaml /edgelauncher/data/mainnet/config.yaml
 #ADD ./edgelauncher/edgecore/config.yaml /edgelauncher/data/mainnet/edgecore/config.yaml
