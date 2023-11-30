@@ -87,7 +87,11 @@ interfaces:
     # Port mappings are from the external port to the internal container port
       port-mapping:
         80: "80"
+        8080: "8080"
+        15888: "15888"
         17888: "17888"
+        17935: "17935"
+        19888: "19888"
     # Port mappings are from the external port to the internal container port
     lan-config:
       443:
