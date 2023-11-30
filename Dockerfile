@@ -66,7 +66,6 @@ EXPOSE 17935
 EXPOSE 19888
 EXPOSE 8080
 
-
 #ENTRYPOINT ["/usr/local/bin/gotty"]
 
 #CMD ["--permit-write","--reconnect","/bin/bash"]
