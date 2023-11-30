@@ -5,9 +5,9 @@ id: theta-edgenode-store
  # A human readable service title
 title: "Theta EdgeNode + EdgeStore"
 # Service version - accepts up to four digits, where the last confirms to revisions necessary for StartOS - see documentation: https://github.com/Start9Labs/emver-rs. This value will change with each release of the service. 
-version: 1.1.0
+version: 1.1.0-alpha-edgestore
 # Release notes for the update - can be a string, paragraph or URL
-release-notes: "Theta EdgeNode 1.1.0 + Beta EdgeStore"
+release-notes: "Theta EdgeNode 1.1.0 + Alpha EdgeStore"
 # The type of license for the project. Include the LICENSE in the root of the project directory. A license is required for a Start9 package.
 license: mit
 # The Start9 wrapper repository URL for the package. This repo contains the manifest file (this), any scripts necessary for configuration, backups, actions, or health checks (more below). This key must exist. But could be embedded into the source repository. 
@@ -26,7 +26,7 @@ description:
   short: Theta EdgeNode + EdgeStore
   # This description will display with additional details in the service's individual marketplace page
   long: |
-    Theta EdgeNode is a service that runs an EdgeNode suitable for promoting to an Elite Edge Node once staked with 10,000 TFuel.  This version contains the EdgeStore beta, which allows you to earn TFuel by sharing your storage space.  This is a beta version of EdgeStore, and is not yet fully functional.  Please see the EdgeStore documentation for more information.
+    Theta EdgeNode is a service that runs an EdgeNode suitable for promoting to an Elite Edge Node once staked with 10,000 TFuel.  This version contains the EdgeStore alpha, which allows you to earn TFuel by sharing your storage space.  This is a alpha version of EdgeStore, and is not yet fully functional.  Please see the EdgeStore documentation for more information.
 # These assets are static files necessary for packaging the service for Start9 (into an s9pk). Each value is a path to the specified asset. If an asset is missing from this list, or otherwise denoted, it will be defaulted to the values denoted below. 
 assets:
   # Default = LICENSE.md
