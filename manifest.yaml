@@ -87,7 +87,7 @@ interfaces:
     # Port mappings are from the external port to the internal container port
       port-mapping:
         80: "80"
-        8080: "8080"
+        # 8080: "8080"
         15888: "15888"
         17888: "17888"
         17935: "17935"
@@ -97,6 +97,9 @@ interfaces:
       443:
         ssl: true
         internal: 80
+      8080:
+        ssl: false
+        internal: 8080
     # Denotes if the service has a user interface to display
     ui: true
     # Denotes the protocol specifications used by this interface
