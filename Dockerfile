@@ -49,7 +49,7 @@ ADD ./configs/multi-node/node/config.yaml /edgelauncher/integration/configs/main
 RUN echo 'echo ""' > /root/.bashrc && \
     echo 'echo "Theta EdgeNode started in the background."' >> /root/.bashrc && \
     echo 'echo "Run staking-summary command to display the Staking Summary for this EdgeNode."' >> /root/.bashrc && \
-    echo 'echo "Other commands: encoding-jobs, encoding-status"' >> /root/.bashrc && \
+    echo 'echo "Other commands: encoding-jobs, encoding-status, launch-edgestore.sh"' >> /root/.bashrc && \
     echo 'echo ""' >> /root/.bashrc  && \
     echo "export PS1='\h:\w\$ '" >> /root/.bashrc
 
