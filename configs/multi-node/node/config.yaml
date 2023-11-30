@@ -1,8 +1,8 @@
 # Theta EdgeStore multi-node privatenet configuration
 p2p:
   port: 50000
-#  seeds: 70.251.209.207:50000,141.193.65.7:50000
-  seeds: 70.251.209.207:50000
+  seeds: 70.251.209.207:50000,141.193.65.7:50000
+#  seeds: 70.251.209.207:50000
   bootstrapSeeds: 127.0.0.1:16888
   minNumPeers: 1
   maxNumPeers: 96
