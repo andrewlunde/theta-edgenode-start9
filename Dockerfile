@@ -40,6 +40,13 @@ RUN chmod a+x /bin/encoding-status
 ADD ./edgelauncher/launch-edgestore.sh /bin/launch-edgestore.sh
 RUN chmod a+x /bin/launch-edgestore.sh
 
+ADD ./edgelauncher/edgestore-status /bin/edgestore-status
+RUN chmod a+x /bin/edgestore-status
+
+ADD ./edgelauncher/edgestore-peers /bin/edgestore-peers
+RUN chmod a+x /bin/edgestore-peers
+
+
 RUN wget -O /bin/edgestore https://theta-downloader.s3.amazonaws.com/edgestore/alpha-preview/linux/edgestore
 RUN chmod +x /bin/edgestore
 RUN mkdir /edgelauncher/integration/configs/mainnet_docker/edgestore
@@ -49,7 +56,7 @@ ADD ./configs/multi-node/node/config.yaml /edgelauncher/integration/configs/main
 RUN echo 'echo ""' > /root/.bashrc && \
     echo 'echo "Theta EdgeNode started in the background."' >> /root/.bashrc && \
     echo 'echo "Run staking-summary command to display the Staking Summary for this EdgeNode."' >> /root/.bashrc && \
-    echo 'echo "Other commands: encoding-jobs, encoding-status, launch-edgestore.sh"' >> /root/.bashrc && \
+    echo 'echo "Other commands: encoding-jobs, encoding-status, edgestore-status, edgestore-peers"' >> /root/.bashrc && \
     echo 'echo ""' >> /root/.bashrc  && \
     echo "export PS1='\h:\w\$ '" >> /root/.bashrc
 
