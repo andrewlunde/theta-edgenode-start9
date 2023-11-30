@@ -43,7 +43,7 @@ RUN chmod a+x /bin/launch-edgestore.sh
 RUN wget -O /bin/edgestore https://theta-downloader.s3.amazonaws.com/edgestore/alpha-preview/linux/edgestore
 RUN chmod +x /bin/edgestore
 RUN mkdir /edgelauncher/integration/configs/mainnet_docker/edgestore
-ADD ./configs/multi-node/node/config.yaml /edgelauncher/integration/configs/edgestore/config.yaml
+ADD ./configs/multi-node/node/config.yaml /edgelauncher/integration/configs/mainnet_docker/edgestore/config.yaml
 
 
 RUN echo 'echo ""' > /root/.bashrc && \
