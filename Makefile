@@ -22,6 +22,7 @@ endif
 clean:
 	rm -f $(PKG_ID).s9pk
 	rm -f scripts/*.js
+	rm -f docker-images/*.tar
 
 clean-manifest:
 	@sed -i '' '/^[[:blank:]]*#/d;s/#.*//' manifest.yaml
