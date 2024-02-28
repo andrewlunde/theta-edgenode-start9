@@ -47,7 +47,7 @@ EXPOSE 17935
 
 RUN apt-get -y update && \
     apt-get install -y htop lsof && \
-    apt-get install -y curl jq vim && \
+    apt-get install -y curl jq vim libgl1 libgl1-mesa-dri && \
     VERSION=v1.0.1 && \
     curl -sLk https://github.com/yudai/gotty/releases/download/$VERSION/gotty_linux_amd64.tar.gz \
     | tar xzC /usr/local/bin && \

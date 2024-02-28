@@ -65,6 +65,11 @@ main:
     # Specifies where on the service's file system its persistence directory should be mounted prior to service startup
     #main: /root
     main: /edgelauncher/data/mainnet
+  # Allow GPU access via /dev/dri
+  gpu-acceleration: true
+hardware-requirements:
+  arch:
+    - x86_64
 # This is where health checks would be defined - see a more advanced example in https://github.com/Start9Labs/start-pages-wrapper
 health-checks: {}
 config: ~
