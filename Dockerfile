@@ -32,11 +32,11 @@ RUN chmod a+x /bin/encoding-jobs
 ADD ./edgelauncher/encoding-status /bin/encoding-status
 RUN chmod a+x /bin/encoding-status
 
-#ADD ./edgelauncher/fedml-jobs /bin/fedml-jobs
-#RUN chmod a+x /bin/fedml-jobs
+ADD ./edgelauncher/fedml-jobs /bin/fedml-jobs
+RUN chmod a+x /bin/fedml-jobs
 
-#ADD ./edgelauncher/lavita-jobs /bin/lavita-jobs
-#RUN chmod a+x /bin/lavita-jobs
+ADD ./edgelauncher/lavita-jobs /bin/lavita-jobs
+RUN chmod a+x /bin/lavita-jobs
 
 ADD ./edgelauncher/launch-edgestore.sh /bin/launch-edgestore.sh
 RUN chmod a+x /bin/launch-edgestore.sh
@@ -57,7 +57,7 @@ ADD ./configs/multi-node/node/config.yaml /edgelauncher/integration/configs/main
 RUN echo 'echo ""' > /root/.bashrc && \
     echo 'echo "Theta EdgeNode started in the background."' >> /root/.bashrc && \
     echo 'echo "Run staking-summary command to display the Staking Summary for this EdgeNode."' >> /root/.bashrc && \
-    echo 'echo "Other commands: encoding-jobs, encoding-status, edgestore-status, edgestore-peers"' >> /root/.bashrc && \
+    echo 'echo "Other commands: encoding-jobs, encoding-status, edgestore-status, edgestore-peers, fedml-jobs, lavita-jobs"' >> /root/.bashrc && \
     echo 'echo ""' >> /root/.bashrc  && \
     echo "export PS1='\h:\w\$ '" >> /root/.bashrc
 
